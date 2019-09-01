@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eWt-nI-IDr">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CustomPopup" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Msr-GU-wtz">
+                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="yfd-jW-b2V">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="alertAction:" destination="BYZ-38-t0r" id="HOe-TX-ZQW"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="Bmu-It-vql">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="popupAction:" destination="BYZ-38-t0r" id="TAQ-lr-lAP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="895" y="92"/>
+        </scene>
+        <!--Popup View Controller-->
+        <scene sceneID="G2j-pE-cHd">
+            <objects>
+                <viewController storyboardIdentifier="popupviewcontroller" id="ZU9-5G-07x" customClass="PopupViewController" customModule="CustomPopup" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cGK-Yl-BmS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="meL-au-1R2">
+                                <rect key="frame" x="31" y="69" width="258" height="430"/>
+                                <subviews>
+                                    <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4zp-12-LzY">
+                                        <rect key="frame" x="3" y="3" width="252" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="8qh-B9-fs5"/>
+                                        </constraints>
+                                        <color key="barTintColor" red="0.31188046930000002" green="0.43513560299999998" blue="0.99170905350000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <textAttributes key="titleTextAttributes">
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </textAttributes>
+                                        <items>
+                                            <navigationItem title="Aug 21, 2019" id="8Gk-kA-3c8"/>
+                                        </items>
+                                    </navigationBar>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="NBv-gk-otA">
+                                        <rect key="frame" x="3" y="382" width="252" height="45"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ikn-Km-jAS">
+                                                <rect key="frame" x="0.0" y="0.0" width="125.5" height="45"/>
+                                                <color key="backgroundColor" red="0.31188046930000002" green="0.43513560299999998" blue="0.99170905350000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                <state key="normal" title="Cancel">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="cancelAction:" destination="ZU9-5G-07x" eventType="touchUpInside" id="uaw-Cr-3Em"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYe-IS-r9U">
+                                                <rect key="frame" x="126.5" y="0.0" width="125.5" height="45"/>
+                                                <color key="backgroundColor" red="0.31188046930000002" green="0.43513560299999998" blue="0.99170905350000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                <state key="normal" title="Save">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="saveAction:" destination="ZU9-5G-07x" eventType="touchUpInside" id="T6e-NL-fia"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="fgi-q6-KUV"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="430" id="B5c-e2-lZ2"/>
+                                    <constraint firstAttribute="bottom" secondItem="NBv-gk-otA" secondAttribute="bottom" constant="3" id="IRj-to-jlV"/>
+                                    <constraint firstAttribute="trailing" secondItem="4zp-12-LzY" secondAttribute="trailing" constant="3" id="Npf-Fe-03P"/>
+                                    <constraint firstItem="4zp-12-LzY" firstAttribute="leading" secondItem="meL-au-1R2" secondAttribute="leading" constant="3" id="Rfm-Ak-hg4"/>
+                                    <constraint firstAttribute="trailing" secondItem="NBv-gk-otA" secondAttribute="trailing" constant="3" id="YgD-Cv-Mon"/>
+                                    <constraint firstItem="NBv-gk-otA" firstAttribute="leading" secondItem="meL-au-1R2" secondAttribute="leading" constant="3" id="bw5-eO-XwO"/>
+                                    <constraint firstAttribute="width" constant="258" id="pFO-Cn-0F8"/>
+                                    <constraint firstItem="4zp-12-LzY" firstAttribute="top" secondItem="meL-au-1R2" secondAttribute="top" constant="3" id="ryj-II-Wy1"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.27250107020547948" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="meL-au-1R2" firstAttribute="centerY" secondItem="cGK-Yl-BmS" secondAttribute="centerY" id="APX-nu-RxA"/>
+                            <constraint firstItem="meL-au-1R2" firstAttribute="centerX" secondItem="cGK-Yl-BmS" secondAttribute="centerX" id="tyK-nq-wbr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="O6U-bn-0eD"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cjZ-x7-BxS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1674.375" y="89.788732394366193"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="M8b-cy-5c8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eWt-nI-IDr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="pCk-Jd-rtO">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.091745637360000007" green="0.62156713009999998" blue="0.90273708109999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ufn-xZ-BP7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dnC-bf-Ohd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="149.59999999999999" y="92.203898050974516"/>
+        </scene>
+    </scenes>
+</document>
